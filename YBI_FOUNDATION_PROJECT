@@ -1,0 +1,146 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPpHEM5UGntq+J3l71CAK2H",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/RED17exe/CODESOFT-TASK-1/blob/main/YBI_FOUNDATION_PROJECT\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Fy5c2Q2_rs-H",
+        "outputId": "0e88e1cd-f159-48f6-f36d-435e386da242"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "🥗 HealthyBites Weekly Meal Scheduler\n",
+            "\n",
+            "Choose an action [add/view/export/quit]: 1\n",
+            "Unknown command. Try again.\n",
+            "Choose an action [add/view/export/quit]: add\n",
+            "  Meal name: chicken\n",
+            "  Date (YYYY-MM-DD): 2025-08-18\n"
+          ]
+        }
+      ],
+      "source": [
+        "import pandas as pd\n",
+        "from datetime import datetime, date\n",
+        "\n",
+        "meals = []\n",
+        "meal_ids = set()\n",
+        "next_id = 1\n",
+        "\n",
+        "def validate_date(date_str: str) -> date:\n",
+        "    \"\"\"Validate future or today's date in YYYY-MM-DD format.\"\"\"\n",
+        "    d = datetime.strptime(date_str, \"%Y-%m-%d\").date()\n",
+        "    if d < date.today():\n",
+        "        raise ValueError(\"Date cannot be in the past.\")\n",
+        "    return d\n",
+        "\n",
+        "def add_meal(name: str, date_str: str, ingredients_str: str) -> int:\n",
+        "    \"\"\"Add a meal with validated date and list of ingredients.\"\"\"\n",
+        "    global next_id\n",
+        "    d = validate_date(date_str)\n",
+        "    ingredients = [i.strip() for i in ingredients_str.split(\",\") if i.strip()]\n",
+        "    if not ingredients:\n",
+        "        raise ValueError(\"No ingredients provided.\")\n",
+        "    mid = next_id\n",
+        "    next_id += 1\n",
+        "    meals.append({\n",
+        "        \"id\": mid,\n",
+        "        \"name\": name,\n",
+        "        \"date\": d,\n",
+        "        \"ingredients\": ingredients\n",
+        "    })\n",
+        "    meal_ids.add(mid)\n",
+        "    print(f\"✅ Added meal #{mid}: \\\"{name}\\\" on {d} with {len(ingredients)} ingredient(s).\")\n",
+        "    return mid\n",
+        "\n",
+        "def view_meals():\n",
+        "    \"\"\"List all meals sorted by date.\"\"\"\n",
+        "    if not meals:\n",
+        "        print(\"No meals scheduled yet.\")\n",
+        "        return\n",
+        "    print(\"\\n📅 Scheduled Meals:\")\n",
+        "    for m in sorted(meals, key=lambda x: x[\"date\"]):\n",
+        "        ingr = \", \".join(m[\"ingredients\"])\n",
+        "        print(f\"  {m['id']}: {m['name']} — {m['date']} — Ingredients: {ingr}\")\n",
+        "    print()\n",
+        "\n",
+        "def generate_ingredients_df() -> pd.DataFrame:\n",
+        "    \"\"\"Aggregate ingredients across all meals into count summary.\"\"\"\n",
+        "    data = [\n",
+        "        {\"ingredient\": ing, \"meal_id\": m[\"id\"]}\n",
+        "        for m in meals for ing in m[\"ingredients\"]\n",
+        "    ]\n",
+        "    if not data:\n",
+        "        return pd.DataFrame(columns=[\"ingredient\", \"count\"])\n",
+        "    df = pd.DataFrame(data)\n",
+        "    return df.groupby(\"ingredient\").size().reset_index(name=\"count\")\n",
+        "\n",
+        "def export_ingredients_csv(filename=\"ingredients.csv\"):\n",
+        "    \"\"\"Export aggregated ingredient counts to CSV.\"\"\"\n",
+        "    df = generate_ingredients_df()\n",
+        "    if df.empty:\n",
+        "        print(\"⚠️ No ingredients to export.\")\n",
+        "        return\n",
+        "    df.to_csv(filename, index=False)\n",
+        "    print(f\"✅ Exported {len(df)} ingredients to {filename}\")\n",
+        "\n",
+        "def main():\n",
+        "    print(\"🥗 HealthyBites Weekly Meal Scheduler\\n\")\n",
+        "    while True:\n",
+        "        cmd = input(\"Choose an action [add/view/export/quit]: \").strip().lower()\n",
+        "        try:\n",
+        "            if cmd == \"add\":\n",
+        "                name = input(\"  Meal name: \").strip()\n",
+        "                date_str = input(\"  Date (YYYY-MM-DD): \").strip()\n",
+        "                ingr = input(\"  Ingredients (comma-separated): \").strip()\n",
+        "                add_meal(name, date_str, ingr)\n",
+        "            elif cmd == \"view\":\n",
+        "                view_meals()\n",
+        "            elif cmd == \"export\":\n",
+        "                export_ingredients_csv()\n",
+        "            elif cmd == \"quit\":\n",
+        "                print(\"Goodbye 👋\")\n",
+        "                break\n",
+        "            else:\n",
+        "                print(\"Unknown command. Try again.\")\n",
+        "        except Exception as e:\n",
+        "            print(f\"⚠️ Error: {e}\")\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    main()"
+      ]
+    }
+  ]
+}
