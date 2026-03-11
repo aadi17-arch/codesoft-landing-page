@@ -7,6 +7,9 @@ virtual web development internship program.
 [View Live](https://aadi17-arch.github.io/codesoft-landing-page/)
 
 ## 📸 Screenshot
+<img width="1417" height="901" alt="image" src="https://github.com/user-attachments/assets/3d755985-517b-42f5-9a1d-7cf17247c76a" />
+<img width="1417" height="901" alt="image" src="https://github.com/user-attachments/assets/3d755985-517b-42f5-9a1d-7cf17247c76a" />
+
 ![Landing Page Screenshot](images/screenshot.png)
 
 ## 🛠 Tech Stack
