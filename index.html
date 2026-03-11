@@ -3,582 +3,483 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-     <!-- font style -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan+SC&display=swap" rel="stylesheet">
-
-     <!-- font awesom -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-     
-     <!-- glider -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.css">
-     
-     <!-- bootstrap link -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-     <!-- csslink -->
+    <title>Fashion Hub | Professional Clothing</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- iconlink -->
-    <link rel="icon" href="./images/logo.jpg">
-    <title>Fashion Hub:Clothes for All</title>
 </head>
 <body>
-
-    <!-- header     -->
-    <header>
-        <div class="header">
-            <ul>
-                <li><a href="">Order online or call us:3433-5433-5433</a></li>
-                <li><a href="">About us</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">Contact</a></li>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Fashion<span>Hub</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
+            <div class="nav-actions">
+                <button class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon-btn"><i class="fa-regular fa-heart"></i></button>
+                <button class="icon-btn cart-btn"><i class="fa-solid fa-cart-shopping"></i><span class="badge">2</span></button>
+                <a href="#" class="btn-primary">Shop Now</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
-    </header>
- <div class="container">
-    <!-- navbar -->
-   <nav class="nav">
-        <div class="leftnav">
-            <h3>Fashion <span>HUB</span></h3>
-        </div>
-        <div class="middlenav">
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="">Terms</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
-        </div>
-
-        <div class="rightnav">
-         <ul>
-           <li> <a href=""><i class="fa-regular fa-user"></i></a></li>
-           <li> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-           <li> <a href=""><i class="fa-regular fa-heart"></i></a></li>
-           <li> <a href=""><i class="fa-sharp fa-solid fa-cart-plus"></i></a></li>
-         </ul>
-        </div>
-
-        <div class="rightnav hamburg-rightnav" >
-            <ul>
-              <li> <a href=""><i class="fa-regular fa-user"></i></a></li>
-              <li> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-              <li> <a href=""><i class="fa-regular fa-heart"></i></a></li>
-              <li> <a href=""><i class="fa-sharp fa-solid fa-cart-plus"></i></a></li>
-            </ul>
-        </div>
-
-        <div class="middlenav hamburg-middlenav">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="">Terms</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <div class="bottomicon">
-                <li id="bottomiconlist"> <a href=""><i class="fa-regular fa-user"></i></a></li>
-                <li id="bottomiconlist"> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li id="bottomiconlist"> <a href=""><i class="fa-regular fa-heart"></i></a></li>
-                <li id="bottomiconlist"> <a href=""><i class="fa-sharp fa-solid fa-cart-plus"></i></a></li>
-                </div>
-            </ul>
-        </div>
-
-
-        <div class="hamburg">
-            <li><i class="fa-solid fa-bars"></i></li>
+            <a href="#" class="btn-primary">Shop Now</a>
         </div>
     </nav>
 
-    <div class="clothsearch">
-      <input type="text" name="" id="" placeholder="Search here">
-      <button class="searchbtn">Search</button>
-    </div>
-    <div class="hero">
-        <div class="glide" id="glide1">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
-                <li class="glide__slide">
-                    <div class="center">
-                        <div class="left">
-                            <span>New Inspiration 2024</span>
-                            <h1>New collection</h1>
-                            <p>Trending from Men's and Women's style collection</p>
-                            <a href="" class="hero-btn">Show Now</a>
-                        </div>
-                        <div class="right">
-                            <img src="./images/hero-1.png" alt="" class="img1">
-                        </div>
-                    </div>
-                </li>
-
-                <li class="glide__slide">
-                    <div class="center">
-                        <div class="left">
-                            <span>New Inspiration 2024</span>
-                            <h1>New collection</h1>
-                            <p>Trending from Men's and Women's style collection</p>
-                            <a href="" class="hero-btn">Show Now</a>
-                        </div>
-                        <div class="right">
-                            <img src="./images/hero-2.png" alt="" class="img1 img2">
-                        </div>
-                    </div>
-                </li>
-              </ul>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content reveal">
+            <span class="subtitle">New Collection 2024</span>
+            <h1>Discover Your <br>True <span>Style</span>.</h1>
+            <p>Explore our premium collection of men's and women's clothing designed for elegance and comfort.</p>
+            <div class="hero-buttons">
+                <a href="#shop" class="btn-primary btn-large">Explore Now</a>
+                <a href="#categories" class="btn-secondary btn-large">View Categories</a>
             </div>
-          </div>
-    </div>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>50k+</h3>
+                    <p>Customers</p>
+                </div>
+                <div class="stat">
+                    <h3>2k+</h3>
+                    <p>Products</p>
+                </div>
+                <div class="stat">
+                    <h3>4.9</h3>
+                    <p>Rating</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image reveal right">
+            <div class="image-wrapper">
+                <img src="./images/hero-1.png" alt="Fashion Hub Collection">
+                <div class="floating-badge">
+                    <i class="fa-solid fa-star"></i>
+                    <div>
+                        <strong>4.9/5</strong>
+                        <span>Top Rated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="cat">
-        <div class="catbox">
-            <img src="./images/cat1.jpg" alt="">
-            <button class="btn">Men's Wear</button>
+    <!-- Categories Section -->
+    <section id="categories" class="categories section-padding bg-light">
+        <div class="section-header reveal">
+            <h2>Shop by <span>Category</span></h2>
+            <p>Find what you're looking for by browsing our specialized collections.</p>
         </div>
-        <div class="catbox">
-            <img src="./images/cat2.jpg" alt="">
-            <button class="btn">Accesories</button>
+        <div class="category-grid">
+            <a href="#" class="category-card reveal">
+                <div class="cat-img">
+                    <img src="./images/cat1.jpg" alt="Men's Wear">
+                </div>
+                <div class="cat-content">
+                    <h3>Men's Wear</h3>
+                    <span class="cat-link">Shop Collection <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+            <a href="#" class="category-card reveal" style="transition-delay: 100ms;">
+                <div class="cat-img">
+                    <img src="./images/cat3.jpg" alt="Women's Wear">
+                </div>
+                <div class="cat-content">
+                    <h3>Women's Wear</h3>
+                    <span class="cat-link">Shop Collection <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+            <a href="#" class="category-card reveal" style="transition-delay: 200ms;">
+                <div class="cat-img">
+                    <img src="./images/cat2.jpg" alt="Accessories">
+                </div>
+                <div class="cat-content">
+                    <h3>Accessories</h3>
+                    <span class="cat-link">Shop Collection <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
         </div>
-        <div class="catbox">
-            <img src="./images/cat3.jpg" alt="">
-            <button class="btn">Women's Wear</button>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section id="shop" class="products section-padding">
+        <div class="section-header reveal">
+            <h2>Trending <span>Products</span></h2>
+            <p>Our top choices based on quality, style and popularity.</p>
         </div>
         
-    </div>
-
-    <div class="fashion">
-        <div class="upperfashion">
-            <h1>Our <span>Fashion</span></h1>
-            <p>Latest Pick of Fashion Hub </p>
+        <div class="product-filters reveal">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Men</button>
+            <button class="filter-btn">Women</button>
+            <button class="filter-btn">Kids</button>
         </div>
 
-        <div class="lowerfashion">
-
-            <div class="cards">
-             <div class="card" style="width: 14rem;">
-                 <div class="img-container">
-                 <img src="./images/product11.jpg" class="card-img-top" alt="...">
-                 <div class="icon">
-                   <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                   <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                   <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                 </div>
-                 </div>
-                 <div class="card-body">
-                  <a href=""><p class="card-text">Solid red color Fancy one-pice</p></a>
-                  <h2>$400</h2>
-                 </div>
-            </div>
-            </div>
-
-            <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/product2.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card reveal">
+                <div class="p-img-container">
+                    <div class="p-badges">
+                        <span class="badge-new">New</span>
                     </div>
+                    <img src="./images/product11.jpg" alt="Fancy Red Dress">
+                    <div class="p-actions">
+                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">Men's grey joggers</p></a>
-                     <h2>$250</h2>
+                </div>
+                <div class="p-info">
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(128)</span>
                     </div>
-               </div>
+                    <a href="#" class="p-title">Solid red color Fancy dress</a>
+                    <div class="p-price-row">
+                        <span class="p-price">$400.00</span>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
             </div>
 
-             <div class="cards">
-             <div class="card" style="width: 14rem;">
-                 <div class="img-container">
-                 <img src="./images/product5.jpg" class="card-img-top" alt="...">
-                 <div class="icon">
-                   <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                   <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                   <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                 </div>
-                 </div>
-                 <div class="card-body">
-                  <a href=""><p class="card-text">Men's Fancy T-shirts</p></a>
-                  <h2>$300</h2>
-                 </div>
+            <!-- Product 2 -->
+            <div class="product-card reveal" style="transition-delay: 100ms;">
+                <div class="p-img-container">
+                    <img src="./images/product2.jpg" alt="Men's Joggers">
+                    <div class="p-actions">
+                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="p-info">
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>(84)</span>
+                    </div>
+                    <a href="#" class="p-title">Men's Comfort Joggers</a>
+                    <div class="p-price-row">
+                        <span class="p-price">$250.00</span>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
             </div>
+
+            <!-- Product 3 -->
+            <div class="product-card reveal" style="transition-delay: 200ms;">
+                <div class="p-img-container">
+                    <div class="p-badges">
+                        <span class="badge-sale">-20%</span>
+                    </div>
+                    <img src="./images/product5.jpg" alt="Men's Fancy T-shirts">
+                    <div class="p-actions">
+                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="p-info">
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(342)</span>
+                    </div>
+                    <a href="#" class="p-title">Premium Graphic T-Shirt</a>
+                    <div class="p-price-row">
+                        <div class="pricing">
+                            <span class="p-price">$300.00</span>
+                            <span class="p-old-price">$375.00</span>
+                        </div>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
             </div>
 
-            <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/product7.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+            <!-- Product 4 -->
+            <div class="product-card reveal" style="transition-delay: 300ms;">
+                <div class="p-img-container">
+                    <img src="./images/product7.jpg" alt="Short tops for women">
+                    <div class="p-actions">
+                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
+                </div>
+                <div class="p-info">
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(95)</span>
                     </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">Short tops for women</p></a>
-                     <h2>$230</h2>
+                    <a href="#" class="p-title">Women's Summer Crop Top</a>
+                    <div class="p-price-row">
+                        <span class="p-price">$230.00</span>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
                     </div>
-               </div>
-               </div>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card reveal">
+                <div class="p-img-container">
+                    <img src="./images/product8.jpg" alt="Jeans for girls">
+                    <div class="p-actions">
+                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="p-info">
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>(67)</span>
+                    </div>
+                    <a href="#" class="p-title">Classic Grey Denim Jeans</a>
+                    <div class="p-price-row">
+                        <span class="p-price">$560.00</span>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
 
-               <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/product8.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+            <!-- Product 6 -->
+            <div class="product-card reveal" style="transition-delay: 100ms;">
+                <div class="p-img-container">
+                    <img src="./images/product14.jpg" alt="Fancy kurta for Men's">
+                    <div class="p-actions">
+                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
+                </div>
+                <div class="p-info">
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(210)</span>
                     </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">Solid grey color jeans for girls</p></a>
-                     <h2>$560</h2>
+                    <a href="#" class="p-title">Men's Traditional Kurta</a>
+                    <div class="p-price-row">
+                        <span class="p-price">$700.00</span>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
                     </div>
-               </div>
-               </div>
-               
-               <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/product9.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                    </div>
-                    </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">jeans for girls</p></a>
-                     <h2>$400</h2>
-                    </div>
-               </div>
-               </div>
-               
-               <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/product10.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                    </div>
-                    </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">Solid blue jeans for mens</p></a>
-                     <h2>$670</h2>
-                    </div>
-               </div>
-               </div>
-               
-               <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/product13.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                    </div>
-                    </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">Men's T-shirts</p></a>
-                     <h2>$400</h2>
-                    </div>
-               </div>
-               </div>
-               
-               <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/product14.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                    </div>
-                    </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">Fancy kurta for Men's</p></a>
-                     <h2>$700</h2>
-                    </div>
-               </div>
-               </div>
-               
-               <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/product15.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                    </div>
-                    </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">black check shirts for mens</p></a>
-                     <h2>$400</h2>
-                    </div>
-               </div>
-               </div>
-               
-               <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/product16.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                    </div>
-                    </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">fancy Frock for kids</p></a>
-                     <h2>$500</h2>
-                    </div>
-               </div>
-               </div>
-               
-               <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/product17.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                    </div>
-                    </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">Frock for girls</p></a>
-                     <h2>$400</h2>
-                    </div>
-               </div>
-               </div>
-               
-               <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/product18.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                    </div>
-                    </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">Clothes for kids</p></a>
-                     <h2>$500</h2>
-                    </div>
-               </div>
-               </div>
-               
-               <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/productk1.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                    </div>
-                    </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">Clothes for kids</p></a>
-                     <h2>$500</h2>
-                    </div>
-               </div>
-               </div>
-               
-               <div class="cards">
-                <div class="card" style="width: 14rem;">
-                    <div class="img-container">
-                    <img src="./images/productk2.jpg" class="card-img-top" alt="...">
-                    <div class="icon">
-                      <div class="iconbox"><i class="fa-regular fa-heart"></i></div>
-                      <div class="iconbox"><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <div class="iconbox"><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
-                    </div>
-                    </div>
-                    <div class="card-body">
-                     <a href=""><p class="card-text">clothes for kids</p></a>
-                     <h2>$400</h2>
-                    </div>
-               </div>
-               </div>
-      
-     </div>
-    </div>
-
-    
-</div>  <!-- container ending div -->
-
-  <div class="banner">
-       <div class="bannerleftbox">
-          <p>New Trending Design</p>
-         <h1>New Collection 2024</h1>
-         <p>New arrival sale 50% OFF limited time offer</p>
-         <button id="bannerbtn">Discover Now</button>
-    </div>
-    <div class="bannerrightbox">
-        <img src="./images/banner.png" alt="">
-    </div>
-  </div>
-
-  <div class="contact">
-    <div class="leftcontact">
-        <h3>Exellent Support</h3>
-        <p>Customer is our topmost priority and <br> we are available for their 24/7 days</p>
-        <button id="contactbtn">Contact Us</button>
-    </div>
-    <div class="rightcontact">
-        <input type="email" placeholder="Emai Address" id="contactinput" >
-        <button id="contactbtn" class="sendbtn">Send</button>
-    </div>
-  </div>
-
-  
-  <div class="footer">
-    <div class="list">
-        <h2>About us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni ullam sit neque nemo ratione ut voluptate facilis ipsa consectetur ipsum.</p>
-    </div>
-    <div class="list">
-        <h2>Product</h2>
-        <li>Our Design</li>
-        <li>Themes</li>
-        <li>Quality</li>
-        <li>Best Price</li>
-    </div>
-    <div class="list">
-        <h2>Quality</h2>
-        <li>Focus</li>
-        <li>Customer</li>
-        <li>Review</li>
-        <li>Offer</li>
-    </div>
-    <div class="list">
-        <h2>Address</h2>
-        <li>Near B.I.T Sindri</li>
-        <li>Sindri</li>
-        <li>Dhanbad</li>
-        <li>Jharkhand</li>
-    </div>        
- </div>
-
-  <div class="outerpopup">
-  <div class="popup">
-    <div class="popupleft">
-      <img src="./images/popup.jpg" alt="">
-    </div>
-    <div class="popupright">
-      <h1>Get 50% OFF on selected items</h1>
-      <p>Sign up in Fashion Hub and save 40% Off in your next order </p>
-      <input type="email" name="" id="" placeholder="Enter your email">
-      <button class="popupbtn">Subscribe</button>
-    </div>
-    <i class="fa-solid fa-circle-xmark closebtn"></i>
-  </div>
-  </div>
-
-
-  <!-- contact us page -->
-  <div class="container3">
-  <div class="container2">
-    <span class="big-circle"></span>
-    <img src="img/shape.png" class="square" alt="" />
-    <div class="form">
-      <div class="contact-info">
-        <h3 class="title">Let's get in touch</h3>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-          dolorum adipisci recusandae praesentium dicta!
-        </p>
-
-        <div class="info">
-          <div class="information">
-            <img src="img/location.png" class="icon" alt="" />
-            <p>25H Sindri Dhanbad Jharkhand India</p>
-          </div>
-          <div class="information">
-            <img src="img/email.png" class="icon" alt="" />
-            <p>fashionhub2222@gmail.com</p>
-          </div>
-          <div class="information">
-            <img src="img/phone.png" class="icon" alt="" />
-            <p>123-456-789</p>
-          </div>
+                </div>
+            </div>
+            
         </div>
-
-        <div class="social-media">
-          <p>Connect with us :</p>
-          <div class="social-icons">
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
+        <div class="center-btn reveal">
+            <a href="#" class="btn-outline">View All Products</a>
         </div>
-      </div>
+    </section>
 
-      <div class="contact-form">
-        <span class="circle one"></span>
-        <span class="circle two"></span>
+    <!-- Banner Section -->
+    <section class="promotional-banner reveal">
+        <div class="promo-content">
+            <span class="promo-badge">Limited Time Offer</span>
+            <h2>Exclusive Collection 2024</h2>
+            <p>Get flat 50% OFF on all new arrivals. Don't miss out on this amazing opportunity to upgrade your wardrobe.</p>
+            <a href="#" class="btn-primary btn-large">Discover Now</a>
+        </div>
+        <div class="promo-image">
+            <img src="./images/banner.png" alt="Promo Banner">
+        </div>
+    </section>
 
-        <form action="index.html" autocomplete="off">
-          <h3 class="title">Contact us</h3>
-          <div class="input-container">
-            <input type="text" name="name" class="input username" />
-            <label for="">Username</label>
-            <span>Username</span>
-          </div>
-          <div class="input-container">
-            <input type="email" name="email" class="input contactemail " />
-            <label for="">Email</label>
-            <span>Email</span>
-          </div>
-          <div class="input-container">
-            <input type="tel" name="phone" class="input phonenumber" />
-            <label for="">Phone</label>
-            <span>Phone</span>
-          </div>
-          <div class="input-container textarea">
-            <textarea name="message" class="input message" ></textarea>
-            <label for="">Message</label>
-            <span>Message</span>
-          </div>
-          <input type="submit" value="Send" class="btn" />
-        </form>
-      </div>
-    </div>
-  </div>
- </div>
+    <!-- Trust / Testimonials Section -->
+    <section class="testimonials section-padding bg-light">
+        <div class="section-header reveal">
+            <h2>Happy <span>Customers</span></h2>
+            <p>Don't just take our word for it. Here's what our customers have to say.</p>
+        </div>
+        
+        <div class="testimonial-container reveal">
+            <div class="testimonial-card">
+                <div class="t-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="t-quote">"The quality of clothes is exceptional. I've bought multiple items and they all fit perfectly. The customer service is also top-notch!"</p>
+                <div class="t-author">
+                    <div class="t-avatar"><span>JD</span></div>
+                    <div class="t-info">
+                        <h4>Jane Doe</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="t-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="t-quote">"I love the modern styles and the ease of shopping on this site. Delivery was quick and the packaging was beautiful."</p>
+                <div class="t-author">
+                    <div class="t-avatar"><span>MS</span></div>
+                    <div class="t-info">
+                        <h4>Michael Smith</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="testimonial-card">
+                <div class="t-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="t-quote">"Hands down the best online clothing store I've used. The fabric quality is completely worth the price. Will order again!"</p>
+                <div class="t-author">
+                    <div class="t-avatar"><span>EJ</span></div>
+                    <div class="t-info">
+                        <h4>Emily Johnson</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Services Section -->
+    <section class="services section-padding">
+        <div class="service-container reveal">
+            <div class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <h3>Free Shipping</h3>
+                <p>On all orders above $1000</p>
+            </div>
+            <div class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-rotate-left"></i></div>
+                <h3>14 Days Return</h3>
+                <p>Simply return it within 14 days for exchange</p>
+            </div>
+            <div class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Secure Payment</h3>
+                <p>We ensure secure payment processing</p>
+            </div>
+            <div class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+                <h3>24/7 Support</h3>
+                <p>We're here to help you anytime</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Newsletter Section -->
+    <section class="newsletter reveal">
+        <div class="news-content">
+            <h2>Join Our Newsletter</h2>
+            <p>Subscribe to get updates on the latest collections and exclusive offers.</p>
+            <form id="newsletter-form" class="news-form">
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email address" required>
+                </div>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.js"></script>
-    <script src="glider.js"></script>
-    <script
-    src="https://kit.fontawesome.com/64d58efce2.js"
-    crossorigin="anonymous"
-    ></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="f-brand">
+                <a href="#" class="logo">Fashion<span>Hub</span></a>
+                <p>We provide the best clothing collection for men and women with high-quality materials and modern trendy designs.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="f-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="f-links">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="f-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Near B.I.T Sindri, Dhanbad</li>
+                    <li><i class="fa-solid fa-envelope"></i> support@fashionhub.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 123 456 7890</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Fashion Hub. All rights reserved. Designed for excellence.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
     <script src="app.js"></script>
 </body>
 </html>
