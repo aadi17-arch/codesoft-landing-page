@@ -3,6 +3,12 @@
 A responsive landing page built as part of the CodSoft 
 virtual web development internship program.
 
+## 🔗 Live Demo
+[View Live](https://aadi17-arch.github.io/codesoft-landing-page/)
+
+## 📸 Screenshot
+![Landing Page Screenshot](images/screenshot.png)
+
 ## 🛠 Tech Stack
 - HTML
 - CSS
